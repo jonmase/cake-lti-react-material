@@ -21,11 +21,11 @@ Or, if Composer is only installed locally run `php composer.phar install`.
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
 
-###Database setup
+### Database setup
 
 Run the SQL in DB_LTI.sql to create the necessary tables for the SQL setup. 
 
-##LTI Setup
+## LTI Setup
 
 You will need to create a lti_consumer record in order to create the first LTI 
 link to the app. Necessary fields to complete at consumer_key, name, secret, 
@@ -39,58 +39,65 @@ if there isn't, allowing them to associate an item.
 
 Launch url will be (localhost\app)\launch (see config\routes.php)
 
-##Javascript Installation
+## Javascript Installation
 
-###Package.json
-Either:
+### Package.json
+
+#### Either:
+
 Update the details in package.json to match the new project
 
-Or:
+#### Or:
+
 `npm init` then run through the questions
 
-###Install Dependencies
-Either:
+### Install Dependencies
+
+#### Either:
+
 In the webroot/js directory, run `npm install` to install dependencies.
 The dependencies are listed in package.json.
 
-Or:
+#### Or:
+
 Install react and material-ui:
 `npm install --save react react-dom material-ui react-tap-event-plugin html5shiv`
-Install dev dependencies:
-npm install --save-dev browserify babelify babel-preset-react gulp gulp-concat gulp-count gulp-livereload gulp-load-plugins gulp-notify gulp-sourcemaps gulp-uglify gulp-util lodash.assign vinyl-buffer vinyl-source-stream watchify
 
-###Gulp
-The, to build the js bundle, run `gulp`. The gulp build steps are defined in 
+Install dev dependencies:
+`npm install --save-dev browserify babelify babel-preset-react gulp gulp-concat gulp-count gulp-livereload gulp-load-plugins gulp-notify gulp-sourcemaps gulp-uglify gulp-util lodash.assign vinyl-buffer vinyl-source-stream watchify`
+
+### Gulp
+To build the js bundle, run `gulp`. The gulp build steps are defined in 
 gulpfile.js
 
 gulp is set to watch the js directories for any changes and will automatically
 run the build steps and reload the browser using livereload when changes are 
 detected. 
 
-###Topbar
+### Topbar
 
 A topbar (webroot/js/src/topbar.jsx) is included as an example of setting up a 
 Material UI component to work with browserify, etc, as this differs slightly 
 from the Material UI docs.
 
-###LiveReload
+### LiveReload
 
 1. Install the LiveReload desktop app from http://livereload.com/
 2. Install the appropriate browser plugin (not IE!)
 3. Enable LiveReload for your page by clicking the plugin icon
 
-###Material UI Theme
+### Material UI Theme
 
 The Material UI theme can be modified by editing webroot/js/src/theme.jsx
 
 See http://www.material-ui.com/#/customization/themes
 
-##Fonts
+## Fonts
 
 The app uses the [Roboto font](https://www.google.com/fonts/specimen/Roboto) 
 and [Material icons](https://design.google.com/icons/).
 
-##Licenses
+## Licenses
 * [CakePHP](http://cakephp.org/): [MIT](https://github.com/cakephp/cakephp/blob/master/LICENSE.txt)
 * [PHP LTI Tool Provider class](http://www.spvsoftwareproducts.com/php/lti_tool_provider/): [LGPLv3](http://www.gnu.org/licenses/lgpl.html)
 * [React](https://facebook.github.io/react) :[BSD](https://github.com/facebook/react/blob/master/LICENSE)
