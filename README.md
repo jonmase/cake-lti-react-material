@@ -41,9 +41,25 @@ Launch url will be (localhost\app)\launch (see config\routes.php)
 
 ##Javascript Installation
 
+###Package.json
+Either:
+Update the details in package.json to match the new project
+
+Or:
+`npm init` then run through the questions
+
+###Install Dependencies
+Either:
 In the webroot/js directory, run `npm install` to install dependencies.
 The dependencies are listed in package.json.
 
+Or:
+Install react and material-ui:
+`npm install --save react react-dom material-ui react-tap-event-plugin html5shiv`
+Install dev dependencies:
+npm install --save-dev browserify babelify babel-preset-react gulp gulp-concat gulp-count gulp-livereload gulp-load-plugins gulp-notify gulp-sourcemaps gulp-uglify gulp-util lodash.assign vinyl-buffer vinyl-source-stream watchify
+
+###Gulp
 The, to build the js bundle, run `gulp`. The gulp build steps are defined in 
 gulpfile.js
 
